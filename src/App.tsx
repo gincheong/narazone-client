@@ -15,7 +15,7 @@ const App = () => {
       }
       <Switch>
         <Route path='/login' component={Login} />
-        // TODO 컴포넌트 추가
+        {/* TODO 컴포넌트 추가 */}
         {/* <Route path='/search' component={Search} /> */}
       </Switch>
     </>

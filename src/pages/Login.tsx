@@ -1,14 +1,14 @@
 // components
-import Footer from "../components/Footer/Footer"
-import Header from "../components/Header/Header"
+import LoginHeader from "../components/LoginHeader/LoginHeader"
+import LoginFooter from "../components/LoginFooter/LoginFooter"
 import LoginContainer from "../components/LoginContainer/LoginContainer"
 
 const Login = () => {
   return (
     <>
-      <Header />
+      <LoginHeader />
       <LoginContainer />
-      <Footer />
+      <LoginFooter />
     </>
   );
 

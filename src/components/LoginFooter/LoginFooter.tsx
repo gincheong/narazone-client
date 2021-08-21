@@ -1,7 +1,7 @@
 // styles
 import useStyles from '../../assets/styles/jss/FooterStyles';
 
-const Footer = () => {
+const LoginFooter = () => {
   const classes = useStyles();
 
   return (
@@ -11,4 +11,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default LoginFooter;

@@ -3,7 +3,7 @@ import useStyles from '../../assets/styles/jss/HeaderStyles';
 // assets
 import logo from '../../assets/images/loona.svg';
 
-const Header = () => {
+const LoginHeader = () => {
   const classes = useStyles();
 
   return (
@@ -14,4 +14,4 @@ const Header = () => {
 
 };
 
-export default Header;
+export default LoginHeader;
