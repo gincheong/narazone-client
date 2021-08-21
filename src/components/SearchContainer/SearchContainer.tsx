@@ -5,31 +5,31 @@ import useStyles from "../../assets/styles/jss/SearchContainerStyles";
 const SearchContainer = () => {
   const classes = useStyles();
 
-  const [searchKeyword, setSearchKeyword] = React.useState('');
-  const [searchDatetime, setSearchDatetime] = React.useState('');
-
-  // 숫자만 입력 가능하도록 이벤트 등록
-  const onChangeNumberInput = (event: React.ChangeEvent) => {
-    setSearchDatetime((event.target as HTMLInputElement).value.replace(/[^0-9]/, ''));
-  };
+  const [userId, setUserId] = React.useState('');
+  const [userPassword, setUserPassword] = React.useState('');
 
   return (
     <div className={classes.container}>
       <input
         className={classes.input}
         type="text"
-        placeholder="검색키워드1, 검색키워드2, ..."
-        value={searchKeyword}
-        onChange={e => setSearchKeyword(e.target.value)}
+        placeholder="아이디 입력"
+        value={userId}
+        onChange={e => setUserId(e.target.value)}
       />
       <input
         className={classes.input}
-        type="text"
-        placeholder="검색기간(일, 기본값 1)"
-        value={searchDatetime}
-        onChange={onChangeNumberInput}
+        type="password"
+        placeholder="비밀번호 입력"
+        value={userPassword}
+        onChange={e => setUserPassword(e.target.value)}
       />
-      <button className={classes.button} type="button">검색</button>
+      <button className={`${classes.button} ${classes.loginButton}`} type="button">
+        로그인
+      </button>
+      <button className={`${classes.button} ${classes.guestButton}`} type="button">
+        게스트로 접속
+      </button>
     </div>
   );
 };

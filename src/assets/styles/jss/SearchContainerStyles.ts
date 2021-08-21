@@ -19,11 +19,19 @@ const useStyles = makeStyles({
     padding: '20px 10px',
     boxSizing: 'content-box',
 
-    backgroundColor: `${BaseStyle.color.accent}`,
-    color: `${BaseStyle.color.light}`,
     fontSize: '18px',
     border: `1px solid ${BaseStyle.color.gray}`,
+    cursor: 'pointer',
   },
+  loginButton: {
+    backgroundColor: `${BaseStyle.color.accent}`,
+    color: `${BaseStyle.color.light}`,
+  },
+  guestButton: {
+    backgroundColor: `${BaseStyle.color.dark}`,
+    color: `${BaseStyle.color.light}`,
+  }
+
 });
 
 export default useStyles;
