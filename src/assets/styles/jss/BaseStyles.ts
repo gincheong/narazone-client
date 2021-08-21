@@ -7,6 +7,10 @@ const BaseStyle = {
     blue: '#567ace',
     lightBlue: '#e3eeff',
   },
+  fontSize: {
+    small: '14px',
+    large: '18px',
+  },  
 };
 
 export default BaseStyle;
