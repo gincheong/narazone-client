@@ -1,5 +1,5 @@
 // styles
-import useStyles from '../../assets/styles/jss/HeaderStyles';
+import useStyles from '../../assets/styles/jss/LoginHeaderStyles';
 // assets
 import logo from '../../assets/images/loona.svg';
 

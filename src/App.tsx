@@ -1,10 +1,11 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 // pages
 import Login from './pages/Login';
+import Search from './pages/Search';
 
 const App = () => {
   // TODO 서버에서 인증받기
-  const isAuthorized = false;
+  const isAuthorized = true;
 
   return (
     <>
@@ -15,8 +16,7 @@ const App = () => {
       }
       <Switch>
         <Route path='/login' component={Login} />
-        {/* TODO 컴포넌트 추가 */}
-        {/* <Route path='/search' component={Search} /> */}
+        <Route path='/search' component={Search} />
       </Switch>
     </>
   );

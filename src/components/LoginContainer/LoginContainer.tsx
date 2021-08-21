@@ -1,6 +1,6 @@
 import React from 'react';
 // styles
-import useStyles from "../../assets/styles/jss/LoginContainerStyle";
+import useStyles from "../../assets/styles/jss/LoginContainerStyles";
 
 const LoginContainer = () => {
   const classes = useStyles();

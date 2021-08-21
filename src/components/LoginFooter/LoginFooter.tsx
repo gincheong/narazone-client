@@ -1,5 +1,5 @@
 // styles
-import useStyles from '../../assets/styles/jss/FooterStyles';
+import useStyles from '../../assets/styles/jss/LoginFooterStyles';
 
 const LoginFooter = () => {
   const classes = useStyles();

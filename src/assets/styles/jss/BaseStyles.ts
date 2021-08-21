@@ -4,6 +4,8 @@ const BaseStyle = {
     accent: '#db706c',
     gray: '#cccccc',
     dark: '#3e3e3e',
+    blue: '#567ace',
+    // green: '
   },
 };
 
