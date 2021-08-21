@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core';
-import BaseStyle from './BaseStyle';
+import BaseStyle from './BaseStyles';
 
 const useStyles = makeStyles({
   container: {
