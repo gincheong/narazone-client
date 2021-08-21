@@ -2,13 +2,13 @@ import React from 'react';
 // components
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import SearchContainer from './components/SearchContainer/SearchContainer';
+import LoginContainer from './components/LoginContainer/LoginContainer';
 
 const App = () => {
   return (
     <>
       <Header />
-      <SearchContainer />
+      <LoginContainer />
       <Footer />
     </>
   );

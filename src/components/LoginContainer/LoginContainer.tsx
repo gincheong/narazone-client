@@ -1,8 +1,8 @@
 import React from 'react';
 // styles
-import useStyles from "../../assets/styles/jss/SearchContainerStyles";
+import useStyles from "../../assets/styles/jss/LoginContainerStyle";
 
-const SearchContainer = () => {
+const LoginContainer = () => {
   const classes = useStyles();
 
   const [userId, setUserId] = React.useState('');
@@ -34,4 +34,4 @@ const SearchContainer = () => {
   );
 };
 
-export default SearchContainer;
+export default LoginContainer;
