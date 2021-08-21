@@ -5,7 +5,7 @@ const BaseStyle = {
     gray: '#cccccc',
     dark: '#3e3e3e',
     blue: '#567ace',
-    // green: '
+    lightBlue: '#e3eeff',
   },
 };
 
