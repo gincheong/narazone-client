@@ -1,5 +1,6 @@
 import React from 'react';
 // components
+import NumberInput from '../NumberInput/NumberInput';
 import RadioWithoutCircle from '../RadioWithoutCircle/RadioWithoutCircle';
 // styles
 import useStyles from "../../assets/styles/jss/SearchDropdownStyle";
@@ -11,17 +12,13 @@ const SearchDropdown = () => {
   // 키워드
   const [keyword, setKeyword] = React.useState('');
   // 검색기간 
-  const [date, setDate] = React.useState(1);
+  const [date, setDate] = React.useState("1");
   // 업무
   const [task, setTask] = React.useState("물품");
   // 유형
   const [type, setType] = React.useState("발주계획");
   // 계약방법
   const [contract, setContract] = React.useState("전체");
-
-  const adjustDate = (positive: Boolean) => {
-    positive ? setDate(date + 1) : setDate(date - 1);
-  };
 
   const onChangeRadio = (event: React.FormEvent, setState: Function) => {
     const $target = event.target as HTMLInputElement;
@@ -36,7 +33,14 @@ const SearchDropdown = () => {
   };
 
   const onClickSearch = (event: React.MouseEvent) => {
-    console.log('검색');
+    const searchParam: any = {};
+    searchParam['키워드'] = keyword;
+    searchParam['검색기간'] = date;
+    searchParam['업무'] = task;
+    searchParam['유형'] = type;
+    searchParam['계약방법'] = contract;
+
+    console.log('검색', searchParam);
   };
 
   return (
@@ -55,10 +59,11 @@ const SearchDropdown = () => {
       <label className={classes.container}>
         <span className={classes.label}>검색기간</span>
         <div className={classes.controller}>
-          {/* TODO input:number로 변경, 0부터 최대 n?까지 */}
-          <button type="button" onClick={() => adjustDate(false)}>-</button>
-          <div>지난 {date}일</div>
-          <button type="button" onClick={() => adjustDate(true)}>+</button>
+          <label>
+            지난
+            <NumberInput state={date} setState={setDate} />
+            일
+          </label>
         </div>
       </label>
       <label className={classes.container}>
@@ -87,16 +92,10 @@ const SearchDropdown = () => {
           </div>
       </label>
       <div className={classes.container}>
-        <button
-          className={classes.button}
-          onClick={onClickSave}
-        >
+        <button className={classes.button} onClick={onClickSave}>
           설정 저장
         </button>
-        <button
-          className={classes.button}
-          onClick={onClickSearch}
-        >
+        <button className={classes.button} onClick={onClickSearch}>
           검색
         </button>
       </div>
