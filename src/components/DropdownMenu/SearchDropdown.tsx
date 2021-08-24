@@ -31,6 +31,14 @@ const SearchDropdown = () => {
     }
   };
 
+  const onClickSave = (event: React.MouseEvent) => {
+    console.log('설정 저장');
+  };
+
+  const onClickSearch = (event: React.MouseEvent) => {
+    console.log('검색');
+  };
+
   return (
     <div>
       <label className={classes.container}>
@@ -78,6 +86,20 @@ const SearchDropdown = () => {
             <RadioWithoutCircle name={"계약방법"} value={"수의"} />
           </div>
       </label>
+      <div className={classes.container}>
+        <button
+          className={classes.button}
+          onClick={onClickSave}
+        >
+          설정 저장
+        </button>
+        <button
+          className={classes.button}
+          onClick={onClickSearch}
+        >
+          검색
+        </button>
+      </div>
     </div>
   );
 };
