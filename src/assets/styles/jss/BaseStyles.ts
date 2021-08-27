@@ -10,7 +10,10 @@ const BaseStyle = {
   fontSize: {
     small: '14px',
     large: '18px',
-  },  
+  },
+  shadow: {
+    default: '0px 0px 10px rgba(0, 0, 0, 0.4)',
+  }
 };
 
 export default BaseStyle;
