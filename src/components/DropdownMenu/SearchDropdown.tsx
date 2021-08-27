@@ -61,7 +61,7 @@ const SearchDropdown = () => {
         <div className={classes.controller}>
           <label>
             지난
-            <NumberInput state={date} setState={setDate} />
+            <NumberInput state={date} setState={setDate} min={0} max={30}/>
             일
           </label>
         </div>

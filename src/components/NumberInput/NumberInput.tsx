@@ -6,34 +6,40 @@ import useStyles from "../../assets/styles/jss/NumberInputStyles";
 
 const NumberInput = (props: Props) => {
   const classes = useStyles();
-  const { state, setState } = props;
+  const { state, setState, min, max } = props;
+
+  const [MIN_VALUE, MAX_VALUE] = [min, max];
 
   /**
    * @param {boolean} flag true라면 더하기, false라면 빼기
    */
   const adjustNumber = (flag: boolean) => {
     if (flag) {
-      setState(String(Number.parseInt(state) + 1));
+      if (Number.parseInt(state) < MAX_VALUE) {
+        setState(String(Number.parseInt(state) + 1));
+      }
     } else {
-      if (Number.parseInt(state) > 0) {
+      if (Number.parseInt(state) > MIN_VALUE) {
         setState(String(Number.parseInt(state) - 1));
       }
     }
   };
 
-  // ! 최대값 지정하거나, input의 width를 넓혀야 함
   /**
    * input값이 변경될 때의 처리
    */
   const onChangeNumber = (event: React.ChangeEvent) => {
     const $target = event.target as HTMLInputElement;
-    if ($target.valueAsNumber > 0) {
+
+    if ($target.valueAsNumber > MAX_VALUE) {
+      setState(MAX_VALUE);
+    } else if ($target.valueAsNumber > MIN_VALUE) {
       // 숫자 왼쪽에 0이 오지 않도록 처리
       setState($target.value.replace(/(^0+)/, ""));
 
     } else if ($target.value === '') {
       // 백스페이스 등으로 숫자 삭제할 때
-      setState("0");
+      setState(MIN_VALUE);
     }
   };
 
@@ -66,6 +72,8 @@ const NumberInput = (props: Props) => {
 interface Props {
   state: string;
   setState: Function;
+  min: number;
+  max: number;
 }
 
 export default NumberInput;
