@@ -8,9 +8,22 @@ body {
 
   background-color: #f2f2f2;
 }
-
+  
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 
+/* diable number input arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* Chrome, Safari, Edge, Opera */
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  /* Firefox */
+  -moz-appearance: textfield;
+}
+/* endof number input */
