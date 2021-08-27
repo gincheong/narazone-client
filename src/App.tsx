@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 // routes
 import PrivateRoute from './routes/PrivateRoute';
 // pages
