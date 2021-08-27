@@ -14,7 +14,7 @@ const App = () => {
     <Switch>
       <Route path='/login' component={Login} />
       <PrivateRoute isAuthorized={isAuthorized} path='/search' component={Search} />
-      {/* <PrivateRoute isAuthorized={isAuthorized} path='/alarm' component={Alarm} /> */}
+      <PrivateRoute isAuthorized={isAuthorized} path='/alarm' component={Alarm} />
     </Switch>
   );
 };

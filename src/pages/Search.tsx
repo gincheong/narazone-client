@@ -1,6 +1,7 @@
 // layouts
 import MainLayout from "../layouts/MainLayout";
 import DropdownMenu from "../components/DropdownMenu/DropdownMenu";
+// components
 import SearchDropdown from "../components/DropdownMenu/SearchDropdown";
 
 const Search = () => {
