@@ -29,6 +29,7 @@ const useStyles = makeStyles({
     border: `1px solid ${BaseStyle.color.gray}`,
     backgroundColor: BaseStyle.color.dark,
     color: BaseStyle.color.light,
+    cursor: 'pointer',
   }
 });
 

@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     padding: '10px 10px',
     margin: '2px',
     fontSize: BaseStyle.fontSize.small,
+    cursor: 'pointer',
   },
   checked: {
     backgroundColor: BaseStyle.color.blue,
