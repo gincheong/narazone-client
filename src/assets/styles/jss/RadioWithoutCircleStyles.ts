@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     border: `1px solid ${BaseStyle.color.gray}`,
     backgroundColor: BaseStyle.color.dark,
     color: BaseStyle.color.light,
-    padding: '2px 6px',
+    padding: '10px 10px',
     margin: '2px',
     fontSize: BaseStyle.fontSize.small,
   },

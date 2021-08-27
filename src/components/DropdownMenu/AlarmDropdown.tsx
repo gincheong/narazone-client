@@ -73,6 +73,12 @@ const AlarmDropdown = () => {
           onChange={e => setEmail(e.target.value)}
         />
       </label>
+      <div>
+        <br/>
+        <div>※ 신청 후 24시간 동안 모니터하며</div>
+        <div>개찰 완료시 낙찰예정자 정보를 수신메일 주소로 발송</div>
+        <br/>
+      </div>
       <div className={classes.container}>
         <button className={classes.button} onClick={onClickSave}>
           설정 저장
