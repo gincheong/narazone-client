@@ -37,9 +37,16 @@ const NumberInput = (props: Props) => {
     }
   };
 
+  const onKeyDownNumber = (event: React.KeyboardEvent) => {
+    if (event.key === '.') {
+      // 소수점 입력 제한
+      event.preventDefault();
+    }
+  };
+
   return (
     <div className={classes.container}>
-      <button className={classes.button} onClick={() => adjustNumber(false)}>
+      <button className={classes.button} onClick={() => adjustNumber(false)} title="minus">
         <FontAwesomeIcon icon={faMinus} />
       </button>
       <input
@@ -47,8 +54,9 @@ const NumberInput = (props: Props) => {
         type="number"
         value={state}
         onChange={onChangeNumber}
+        onKeyDown={onKeyDownNumber}
       />
-      <button className={classes.button} onClick={() => adjustNumber(true)}>
+      <button className={classes.button} onClick={() => adjustNumber(true)} title="plus">
         <FontAwesomeIcon icon={faPlus} />
       </button>
     </div>
