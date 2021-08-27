@@ -3,6 +3,7 @@ import React from 'react';
 import useStyles from "../../assets/styles/jss/AlarmDropdownStyle";
 // components
 import RadioWithoutCircle from '../RadioWithoutCircle/RadioWithoutCircle';
+import EmailInput from '../EmailInput/EmailInput';
 
 const AlarmDropdown = () => {
   const classes = useStyles();
@@ -66,11 +67,11 @@ const AlarmDropdown = () => {
       </label>
       <label className={classes.container}>
         <span className={classes.label}>수신메일</span>
-        <input className={classes.input}
-          type="email"
+        <EmailInput
+          className={classes.input}
           placeholder={"ex) abc@naver.com"}
-          value={email}
-          onChange={e => setEmail(e.target.value)}
+          state={email}
+          setState={setEmail}
         />
       </label>
       <div>
