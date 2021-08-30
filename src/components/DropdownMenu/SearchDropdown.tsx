@@ -71,26 +71,56 @@ const SearchDropdown = () => {
       <label className={classes.container}>
         <span className={classes.label}>업무</span>
         <div className={classes.controller} onChange={e => onChangeRadio(e, setTask)}>
-          <RadioWithoutCircle name={"업무"} value={"물품"} defaultChecked />
-          <RadioWithoutCircle name={"업무"} value={"공사"} />
-          <RadioWithoutCircle name={"업무"} value={"용역"} />
+          <RadioWithoutCircle
+            className={classes.radio} checkedClassName={classes.radioChecked}
+            name={"업무"} value={"물품"} defaultChecked
+          />
+          <RadioWithoutCircle
+            className={classes.radio} checkedClassName={classes.radioChecked}
+            name={"업무"} value={"공사"}
+          />
+          <RadioWithoutCircle
+            className={classes.radio} checkedClassName={classes.radioChecked}
+            name={"업무"} value={"용역"}
+          />
         </div>
       </label>
       <label className={classes.container}>
         <span className={classes.label}>유형</span>
           <div className={classes.controller} onChange={e => onChangeRadio(e, setType)}>
-            <RadioWithoutCircle name={"유형"} value={"발주계획"} defaultChecked />
-            <RadioWithoutCircle name={"유형"} value={"사전규격"} />
-            <RadioWithoutCircle name={"유형"} value={"공고"} />
-            <RadioWithoutCircle name={"유형"} value={"개찰결과"} />
+            <RadioWithoutCircle
+              className={classes.radio} checkedClassName={classes.radioChecked}
+              name={"유형"} value={"발주계획"} defaultChecked
+            />
+            <RadioWithoutCircle
+              className={classes.radio} checkedClassName={classes.radioChecked}
+              name={"유형"} value={"사전규격"}
+            />
+            <RadioWithoutCircle
+              className={classes.radio} checkedClassName={classes.radioChecked}
+              name={"유형"} value={"공고"}
+            />
+            <RadioWithoutCircle
+              className={classes.radio} checkedClassName={classes.radioChecked}
+              name={"유형"} value={"개찰결과"}
+            />
           </div>
       </label>
       <label className={classes.container}>
         <span className={classes.label}>계약방법</span>
           <div className={classes.controller} onChange={e => onChangeRadio(e, setContract)}>
-            <RadioWithoutCircle name={"계약방법"} value={"전체"} defaultChecked />
-            <RadioWithoutCircle name={"계약방법"} value={"경쟁"} />
-            <RadioWithoutCircle name={"계약방법"} value={"수의"} />
+            <RadioWithoutCircle
+              className={classes.radio} checkedClassName={classes.radioChecked}
+              name={"계약방법"} value={"전체"} defaultChecked
+            />
+            <RadioWithoutCircle
+              className={classes.radio} checkedClassName={classes.radioChecked}
+              name={"계약방법"} value={"경쟁"}
+            />
+            <RadioWithoutCircle
+              className={classes.radio} checkedClassName={classes.radioChecked}
+              name={"계약방법"} value={"수의"}
+            />
           </div>
       </label>
       <div className={classes.container}>

@@ -24,11 +24,21 @@ const useStyles = makeStyles({
   },
   button: {
     flex: '1',
+    margin: '10px',
     border: `1px solid ${BaseStyle.color.gray}`,
     backgroundColor: BaseStyle.color.dark,
     color: BaseStyle.color.light,
     textAlign: 'center',
-  }
+  },
+  radio: {
+    // fontSize: '13px',
+    color: BaseStyle.color.light,
+    backgroundColor: BaseStyle.color.dark,
+    margin: '5px',
+  },
+  radioChecked: {
+    backgroundColor: BaseStyle.color.blue,
+  },
 });
 
 export default useStyles;
