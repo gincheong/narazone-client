@@ -1,10 +1,15 @@
 import React from 'react';
+// components
+import CustomButton from '../CustomButton/CustomButton';
 // styles
 import useStyles from '../../assets/styles/jss/RadioWithoutCircleStyles';
 
-const RadioWithoutCircle = (props: Props) => {
+const RadioWithoutCircle = (props: Props
+    & React.LabelHTMLAttributes<HTMLLabelElement>
+    & React.InputHTMLAttributes<HTMLInputElement>
+  ) => {
   const classes = useStyles();
-  const { value, name, text, defaultChecked } = props;
+  const { value, name, text, defaultChecked, className, checkedClassName } = props;
 
   const [checked, setChecked] = React.useState(false);
 
@@ -16,7 +21,7 @@ const RadioWithoutCircle = (props: Props) => {
   }, [inputRef.current?.checked]);
 
   return (
-    <label className={classes.label + " " + (checked && classes.checked)}>
+    <label className={classes.label + " " + className}>
       <input 
         className={classes.radio}
         value={value}
@@ -25,16 +30,16 @@ const RadioWithoutCircle = (props: Props) => {
         ref={inputRef}
         defaultChecked={defaultChecked}
       />
-      {text ?? value}
+      <CustomButton className={checked ? checkedClassName : ''}>
+        {text ?? value}
+      </CustomButton>
     </label>
   );
 };
 
 interface Props {
-  value: string;
-  name?: string;
   text?: string;
-  defaultChecked?: boolean
+  checkedClassName?: string;
 }
 
 export default RadioWithoutCircle;

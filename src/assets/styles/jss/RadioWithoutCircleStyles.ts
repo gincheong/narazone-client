@@ -6,17 +6,11 @@ const useStyles = makeStyles({
     display: 'none', // hide radio checkbox
   },
   label: {
-    border: `1px solid ${BaseStyle.color.gray}`,
-    backgroundColor: BaseStyle.color.dark,
-    color: BaseStyle.color.light,
-    padding: '10px 10px',
-    margin: '2px',
     fontSize: BaseStyle.fontSize.small,
+    borderRadius: BaseStyle.radius.default,
     cursor: 'pointer',
+    ...BaseStyle.disableButtonHighlight,
   },
-  checked: {
-    backgroundColor: BaseStyle.color.blue,
-  }
 });
 
 export default useStyles;
