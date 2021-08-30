@@ -4,11 +4,11 @@ import BaseStyle from './BaseStyles';
 const useStyles = makeStyles({
   container: {
     display: 'inline',
-    border: `2px solid ${BaseStyle.color.dark}`,
+    border: `1px solid ${BaseStyle.color.dark}`,
     borderRadius: '5px',
     backgroundColor: BaseStyle.color.light,
     padding: '2px',
-    margin: '0px 5px',
+    margin: '0px 10px',
   },
   inputNumber: {
     border: 'none',
