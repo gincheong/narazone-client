@@ -13,7 +13,9 @@ const Table = (props: Props) => {
         <thead className={classes.tableHead}>
           <TableRow data={head} />
         </thead>
-        {children}
+        <tbody>
+          {children}
+        </tbody>
       </table>
     </div>
   );

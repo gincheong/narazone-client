@@ -8,7 +8,7 @@ const TableRow = (props: Props) => {
   return (
     <tr className={classes.tableRow}>
       {data.map(each => 
-        <td className={classes.tableData}>
+        <td key={each} className={classes.tableData}>
           {each}
         </td>
       )}
