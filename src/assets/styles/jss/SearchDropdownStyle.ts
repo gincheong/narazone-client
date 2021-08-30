@@ -24,12 +24,10 @@ const useStyles = makeStyles({
   },
   button: {
     flex: '1',
-    margin: '0px 5px',
-    padding: '10px 0px',
     border: `1px solid ${BaseStyle.color.gray}`,
     backgroundColor: BaseStyle.color.dark,
     color: BaseStyle.color.light,
-    cursor: 'pointer',
+    textAlign: 'center',
   }
 });
 

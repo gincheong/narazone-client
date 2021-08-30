@@ -3,6 +3,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import NumberInput from '../NumberInput/NumberInput';
 import RadioWithoutCircle from '../RadioWithoutCircle/RadioWithoutCircle';
+import CustomButton from '../CustomButton/CustomButton';
 // styles
 import useStyles from "../../assets/styles/jss/SearchDropdownStyle";
 
@@ -93,12 +94,12 @@ const SearchDropdown = () => {
           </div>
       </label>
       <div className={classes.container}>
-        <button className={classes.button} onClick={onClickSave}>
+        <CustomButton className={classes.button} onClick={onClickSave}>
           설정 저장
-        </button>
-        <button className={classes.button} onClick={onClickSearch}>
+        </CustomButton>
+        <CustomButton className={classes.button} onClick={onClickSearch}>
           검색
-        </button>
+        </CustomButton>
       </div>
     </Card>
   );
