@@ -1,5 +1,6 @@
 import React from 'react';
 // components
+import Card from '../Card/Card';
 import NumberInput from '../NumberInput/NumberInput';
 import RadioWithoutCircle from '../RadioWithoutCircle/RadioWithoutCircle';
 // styles
@@ -44,7 +45,7 @@ const SearchDropdown = () => {
   };
 
   return (
-    <div>
+    <Card>
       <label className={classes.container}>
         <span className={classes.label}>키워드</span>
         <div className={classes.controller}>
@@ -99,7 +100,7 @@ const SearchDropdown = () => {
           검색
         </button>
       </div>
-    </div>
+    </Card>
   );
 };
 

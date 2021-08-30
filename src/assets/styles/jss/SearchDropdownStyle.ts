@@ -4,7 +4,7 @@ import BaseStyle from './BaseStyles';
 const useStyles = makeStyles({
   container: {
     display: 'flex',
-    margin: '10px 0px',
+    margin: '10px',
   },
   label: {
     flex: '0.3',

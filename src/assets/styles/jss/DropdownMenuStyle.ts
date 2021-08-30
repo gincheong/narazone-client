@@ -14,8 +14,6 @@ const useStyles = makeStyles({
   },
   menuContainer: {
     border: `1px solid ${BaseStyle.color.gray}`,
-    backgroundColor: BaseStyle.color.lightBlue,
-    padding: '10px',
   }
 });
 
