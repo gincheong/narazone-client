@@ -45,6 +45,10 @@ const SearchDropdown = () => {
     // searchParam['유형'] = type;
     // searchParam['계약방법'] = contract;
 
+    // ? 키워드 입력하지 않을 시 검색하지 않음
+    // ? UI적인 표현이 필요해보임
+    if (keyword === '') { return; }
+
     dispatch(fetchBid({ itemName: keyword, period: date }));
 
   };
