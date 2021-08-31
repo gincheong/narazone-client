@@ -1,16 +1,19 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 // components
 import Card from '../Card/Card';
 import NumberInput from '../NumberInput/NumberInput';
 import RadioWithoutCircle from '../RadioWithoutCircle/RadioWithoutCircle';
 import CustomButton from '../CustomButton/CustomButton';
+// actions
+import { fetchBid } from '../../reducers/bidReducer';
 // styles
 import useStyles from "../../assets/styles/jss/SearchDropdownStyle";
 
 const SearchDropdown = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
 
-  // TODO 각 값이 api에 어떻게 전달될 지 알아야 함
   // 키워드
   const [keyword, setKeyword] = React.useState('');
   // 검색기간 
@@ -35,14 +38,15 @@ const SearchDropdown = () => {
   };
 
   const onClickSearch = (event: React.MouseEvent) => {
-    const searchParam: any = {};
-    searchParam['키워드'] = keyword;
-    searchParam['검색기간'] = date;
-    searchParam['업무'] = task;
-    searchParam['유형'] = type;
-    searchParam['계약방법'] = contract;
+    // const searchParam: any = {};
+    // searchParam['키워드'] = keyword;
+    // searchParam['검색기간'] = date;
+    // searchParam['업무'] = task;
+    // searchParam['유형'] = type;
+    // searchParam['계약방법'] = contract;
 
-    console.log('검색', searchParam);
+    dispatch(fetchBid({ itemName: keyword, period: date }));
+
   };
 
   return (
