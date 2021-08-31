@@ -27,11 +27,15 @@ const Search = () => {
         <Table head={['공고명', '기관명', '금액', '마감일']}>
 
           {/* // XXX type 수정해야 함, API 변경되면 수행 */}
-          {Object.values(bids).map((each: any) => 
-            each.map((each: any) => 
-              <TableRow key={each[0].name} data={
-                [each[0].name, each[1].gov, each[3].money, each[2].deadline]
-              } />
+          {Object.entries(bids).map((keyval: any) => 
+            keyval[1].map((each: any) => 
+              <TableRow
+                key={each[0].name}
+                bold={keyval[0]}
+                data={
+                  [each[0].name, each[1].gov, each[3].money, each[2].deadline]
+                }
+              />
             )
           )}
           
