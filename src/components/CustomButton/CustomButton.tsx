@@ -6,7 +6,7 @@ import useStyles from '../../assets/styles/jss/CustomButtonStyles';
 
 const CustomButton = (props: Props & React.HtmlHTMLAttributes<HTMLDivElement>) => {
   const classes = useStyles();
-  const { children, className } = props;
+  const { children, className, onClick } = props;
 
   const [rippleKey, setRippleKey] = React.useState(0);
   const [ripples, setRipples] = React.useState<{
@@ -48,7 +48,10 @@ const CustomButton = (props: Props & React.HtmlHTMLAttributes<HTMLDivElement>) =
   return (
     <div
       className={className + " " + classes.container}
-      onClick={onClickButton}
+      onClick={e => {
+        onClickButton(e);
+        onClick && onClick(e);
+      }}
       ref={buttonRef}
     >
       {children}
