@@ -3,7 +3,7 @@ import BaseStyle from './BaseStyles';
 
 const useStyles = makeStyles({
   container: {
-    padding: '20px',
+    padding: '10px',
     borderRadius: BaseStyle.radius.default,
     textDecoration: 'none',
     position: 'relative',
