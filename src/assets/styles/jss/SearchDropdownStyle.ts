@@ -13,7 +13,6 @@ const useStyles = makeStyles({
   controller: {
     flex: '1',
     padding: '5px',
-    display: 'flex',
     '& button': {
       margin: '2px',
     }
@@ -24,17 +23,18 @@ const useStyles = makeStyles({
   },
   button: {
     flex: '1',
-    margin: '10px',
+    margin: '5px',
     border: `1px solid ${BaseStyle.color.gray}`,
     backgroundColor: BaseStyle.color.dark,
     color: BaseStyle.color.light,
     textAlign: 'center',
   },
   radio: {
-    // fontSize: '13px',
+    flex: '1',
     color: BaseStyle.color.light,
-    backgroundColor: BaseStyle.color.dark,
-    margin: '5px',
+    backgroundColor: BaseStyle.color.darkgray,
+    margin: '2px',
+    textAlign: 'center',
   },
   radioChecked: {
     backgroundColor: BaseStyle.color.blue,
