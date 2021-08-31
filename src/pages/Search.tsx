@@ -10,20 +10,19 @@ import SearchDropdown from "../components/DropdownMenu/SearchDropdown";
 import Card from "../components/Card/Card";
 import Table from "../components/Table/Table";
 import TableRow from "../components/Table/TableRow";
+// styles
+import useStyles from '../assets/styles/jss/SearchStyles';
 
 const Search = () => {
+  const classes = useStyles();
   const { bids } = useSelector((state: RootState) => state.bidReducer);
-
-  React.useEffect(() => {
-    console.log(bids);
-  }, [bids]);
 
   return (
     <MainLayout title={"narazone 공고검색"}>
       <DropdownMenu title={"Print (검색 설정)"}>
         <SearchDropdown />
       </DropdownMenu>
-      <Card>
+      <Card className={classes.card}>
         <Table head={['공고명', '기관명', '금액', '마감일']}>
 
           {/* // XXX type 수정해야 함, API 변경되면 수행 */}

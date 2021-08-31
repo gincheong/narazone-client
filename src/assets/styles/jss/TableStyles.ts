@@ -6,7 +6,8 @@ const useStyles = makeStyles({
     padding: '5px',
   },
   table: {
-    width: '100%',
+    minWidth: '100%',
+    width: 'max-content',
     borderCollapse: 'collapse',
   },
   tableHead: {
