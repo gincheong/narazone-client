@@ -1,6 +1,7 @@
 import React from 'react';
 // components
 import MainHeader from '../components/MainHeader/MainHeader';
+import Spinner from '../components/Spinner/Spinner';
 
 const MainLayout = (props: Props) => {
   const { children, title } = props;
@@ -9,6 +10,7 @@ const MainLayout = (props: Props) => {
     <>
       <MainHeader title={title} />
       {children}
+      <Spinner />
     </>
   );
 
