@@ -1,3 +1,7 @@
+import React from 'react';
+import { useSelector } from 'react-redux';
+// stores
+import { RootState } from '../reducers/rootReducer';
 // layouts
 import MainLayout from "../layouts/MainLayout";
 import DropdownMenu from "../components/DropdownMenu/DropdownMenu";
@@ -8,6 +12,12 @@ import Table from "../components/Table/Table";
 import TableRow from "../components/Table/TableRow";
 
 const Search = () => {
+  const { bids } = useSelector((state: RootState) => state.bidReducer);
+
+  React.useEffect(() => {
+    console.log(bids);
+  }, [bids]);
+
   return (
     <MainLayout title={"narazone 공고검색"}>
       <DropdownMenu title={"Print (검색 설정)"}>
@@ -15,8 +25,16 @@ const Search = () => {
       </DropdownMenu>
       <Card>
         <Table head={['공고명', '기관명', '금액', '마감일']}>
-          <TableRow data={['똥 치우기', 'MBSD', '100', '2000년후']} />
-          <TableRow data={['밥 먹기', '이인규', '255', '2017-08-01']} />
+
+          {/* // XXX type 수정해야 함, API 변경되면 수행 */}
+          {Object.values(bids).map((each: any) => 
+            each.map((each: any) => 
+              <TableRow key={each[0].name} data={
+                [each[0].name, each[1].gov, each[3].money, each[2].deadline]
+              } />
+            )
+          )}
+          
         </Table>
       </Card>
     </MainLayout>
