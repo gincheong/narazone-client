@@ -5,9 +5,9 @@ import useStyles from "../../assets/styles/jss/TableRowStyles";
 
 const TableRow = (props: Props & React.HTMLAttributes<HTMLTableRowElement>) => {
   const classes = useStyles();
-  const { data, bold, className } = props;
+  const { data, highlight, className } = props;
 
-  const boldText = (text: string, keyword: string) => {
+  const highlightText = (text: string, keyword: string) => {
     const re = new RegExp(keyword, 'g');
 
     const cleaned = DOMPurify.sanitize(text.replace(re, `
@@ -21,8 +21,8 @@ const TableRow = (props: Props & React.HTMLAttributes<HTMLTableRowElement>) => {
     <tr className={classes.tableRow + " " + className}>
       {data.map((each, idx) => 
         <td key={each} className={classes.tableData}>
-          {(idx === 0 && bold) ?
-            boldText(each, bold) :
+          {(idx === 0 && highlight) ?
+            highlightText(each, highlight) :
             each
           }
         </td>
@@ -33,7 +33,7 @@ const TableRow = (props: Props & React.HTMLAttributes<HTMLTableRowElement>) => {
 
 interface Props {
   data: string[];
-  bold?: string;
+  highlight?: string;
 }
 
 export default TableRow;

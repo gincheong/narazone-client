@@ -42,7 +42,7 @@ const Search = () => {
               <TableRow
                 className={classes.row}
                 key={each[0].name}
-                bold={keyval[0]}
+                highlight={keyval[0]}
                 data={
                   [
                     each[0].name,
