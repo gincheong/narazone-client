@@ -20,9 +20,9 @@ const SearchDropdown = () => {
   // 검색기간 
   const [date, setDate] = React.useState("1");
   // 업무
-  const [task, setTask] = React.useState("물품");
+  const [task, setTask] = React.useState("용역");
   // 유형
-  const [type, setType] = React.useState("발주계획");
+  const [type, setType] = React.useState("사전계획");
   // 계약방법
   const [contract, setContract] = React.useState("전체");
 
@@ -84,15 +84,15 @@ const SearchDropdown = () => {
           <Grid>
             <RadioWithoutCircle
               className={classes.radio} checkedClassName={classes.radioChecked}
-              name={"업무"} value={"물품"} defaultChecked
+              name={"업무"} value={"용역"} defaultChecked
+            />
+            <RadioWithoutCircle
+              className={classes.radio} checkedClassName={classes.radioChecked}
+              name={"업무"} value={"물품"}
             />
             <RadioWithoutCircle
               className={classes.radio} checkedClassName={classes.radioChecked}
               name={"업무"} value={"공사"}
-            />
-            <RadioWithoutCircle
-              className={classes.radio} checkedClassName={classes.radioChecked}
-              name={"업무"} value={"용역"}
             />
           </Grid>
         </div>
@@ -103,11 +103,11 @@ const SearchDropdown = () => {
             <Grid>
               <RadioWithoutCircle
                 className={classes.radio} checkedClassName={classes.radioChecked}
-                name={"유형"} value={"발주계획"} defaultChecked
+                name={"유형"} value={"사전규격"} defaultChecked
               />
               <RadioWithoutCircle
                 className={classes.radio} checkedClassName={classes.radioChecked}
-                name={"유형"} value={"사전규격"}
+                name={"유형"} value={"발주계획"}
               />
             </Grid>
             <Grid>
