@@ -11,7 +11,7 @@ const TableRow = (props: Props & React.HTMLAttributes<HTMLTableRowElement>) => {
     const re = new RegExp(keyword, 'g');
 
     const cleaned = DOMPurify.sanitize(text.replace(re, `
-      <b>${keyword}</b>
+      <b class=${classes.highlight}>${keyword}</b>
     `));
   
     return ReactHtmlParser(cleaned);

@@ -8,6 +8,9 @@ const useStyles = makeStyles({
   tableData: {
     padding: '10px',
   },
+  highlight: {
+    backgroundColor: '#fcf695',
+  },
 });
 
 export default useStyles;
