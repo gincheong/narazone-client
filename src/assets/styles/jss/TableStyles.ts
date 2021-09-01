@@ -6,13 +6,13 @@ const useStyles = makeStyles({
     padding: '5px',
   },
   table: {
-    minWidth: '100%',
-    width: 'max-content',
+    width: '100%',
     borderCollapse: 'collapse',
   },
   tableHead: {
     color: BaseStyle.color.blue,
     fontWeight: 'bold',
+    whiteSpace: 'nowrap',
   },
 });
 
