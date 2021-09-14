@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 // components
 import Card from '../Card/Card';
+import FloatingLabelInput from '../FloatingLabelInput/FloatingLabelInput';
 import NumberInput from '../NumberInput/NumberInput';
 import RadioWithoutCircle from '../RadioWithoutCircle/RadioWithoutCircle';
 import CustomButton from '../CustomButton/CustomButton';
@@ -60,9 +61,9 @@ const SearchDropdown = () => {
       <label className={classes.container}>
         <span className={classes.label}>키워드</span>
         <div className={classes.controller}>
-          <input className={classes.input}
-            type="text"
-            placeholder={"ex) 재난, 안전, ..."}
+          <FloatingLabelInput
+            underlineColor={'#567ace'}
+            label={'ex) 재난, 안전 ...'}
             value={keyword}
             onChange={e => setKeyword(e.target.value)}
           />

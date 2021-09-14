@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 // ! 배포 시 수정
-// const API_ENDPOINT = 'http://localhost:8000';
-const API_ENDPOINT = 'http://narazone.herokuapp.com';
+const API_ENDPOINT = 'http://localhost:8000';
+// const API_ENDPOINT = 'http://narazone.herokuapp.com';
 
 // XXX Type 수정해야 함
 interface BidState {
