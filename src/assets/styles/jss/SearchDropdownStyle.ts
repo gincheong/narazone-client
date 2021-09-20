@@ -1,10 +1,11 @@
-import { makeStyles } from '@material-ui/core';
-import BaseStyle from './BaseStyles';
+import { makeStyles } from '@material-ui/core'
+import BaseStyle from './BaseStyles'
 
 const useStyles = makeStyles({
   container: {
     display: 'flex',
     margin: '10px',
+    minHeight: '40px',
   },
   label: {
     flex: '0.3',
@@ -15,11 +16,7 @@ const useStyles = makeStyles({
     padding: '5px',
     '& button': {
       margin: '2px',
-    }
-  },
-  input: {
-    padding: '5px',
-    flex: '1',
+    },
   },
   button: {
     flex: '1',
@@ -29,16 +26,6 @@ const useStyles = makeStyles({
     color: BaseStyle.color.light,
     textAlign: 'center',
   },
-  radio: {
-    flex: '1',
-    color: BaseStyle.color.light,
-    backgroundColor: BaseStyle.color.darkgray,
-    margin: '2px',
-    textAlign: 'center',
-  },
-  radioChecked: {
-    backgroundColor: BaseStyle.color.blue,
-  },
-});
+})
 
-export default useStyles;
+export default useStyles
